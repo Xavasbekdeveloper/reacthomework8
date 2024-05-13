@@ -4,6 +4,7 @@ import axios from "../../api";
 import { useState } from "react";
 import { useEffect } from "react";
 import { memo } from "react";
+import { Link } from "react-router-dom";
 
 const AllProducts = () => {
   const [data, setData] = useState(null);
@@ -18,7 +19,9 @@ const AllProducts = () => {
   let allProducts = data?.map((product) => (
     <div className="allProducts__card">
       <div className="allProducts__card__img">
-        <img src={product.images[0]} alt={product.title} />
+        <Link to={`/product/${product.id}`}>
+          <img src={product.images[0]} alt={product.title} />
+        </Link>
       </div>
       <div className="allProducts__card__info">
         <h3 title={product.title} className="allProducts__card__title">
