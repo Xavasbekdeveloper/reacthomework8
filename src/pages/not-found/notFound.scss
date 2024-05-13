@@ -1,0 +1,19 @@
+.notFound {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    span {
+        font-size: 5vw;
+        font-weight: 700;
+    }
+
+    button {
+        border-radius: 6px;
+        background: gray;
+        padding: 10px 20px;
+        color: #fff;
+    }
+}
